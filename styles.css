@@ -25,7 +25,12 @@ body {
 
 }
 .hangman-box img {
-    max-width: 270px;
+    max-width: 200px; 
+    height: auto;
+    display: block;
+    margin: 0 auto; 
+}
+
 }
 .hangman-box h1{
     font-size: 1.45rem;
