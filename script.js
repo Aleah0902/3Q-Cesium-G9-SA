@@ -58,11 +58,16 @@ function handleGuess(letter) {
 
    if (selectedWord.includes(letter)) {
     guessedLetters.push(letter);
+
 } else {
-    hangmanImage.src = `sprites/${wrongAttempts}.png`;
-    wrongAttempts++;
+    wrongAttempts++; // ✅ Increase first!
+    if (wrongAttempts <= maxAttempts) {
+        hangmanImage.src = `sprites/${wrongAttempts}.png`; // ✅ Now updates correctly
+    }
     guessesText.textContent = `${wrongAttempts} / ${maxAttempts}`;
 }
+
+
 
 
     updateWordDisplay();
