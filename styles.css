@@ -18,10 +18,14 @@ body {
 }
 
 .hangman-box img {
-    max-width: 200px; 
+    width: 150px; 
     height: auto;
+    max-height: 300px;
     display: block;
-    margin: 0 auto; 
+    margin: 0 auto;
+    object-fit: contain; 
+}
+
 }
 
 .hangman-box h1{
