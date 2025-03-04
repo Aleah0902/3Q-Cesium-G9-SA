@@ -19,7 +19,7 @@ function startGame() {
     wrongAttempts = 0;
     
     // Reset hangman image
-    hangmanImage.src = `sprites/1.png`;
+    hangmanImage.src = `sprites/0.png`;
     
     // Reset word display
     wordDisplay.innerHTML = selectedWord.split('').map(() => '<span class="letter">_</span>').join('');
