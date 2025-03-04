@@ -60,9 +60,14 @@ function handleGuess(letter) {
     guessedLetters.push(letter);
 
 } else {
-    wrongAttempts++; // ✅ Increase first!
-    if (wrongAttempts <= maxAttempts) {
-        hangmanImage.src = `sprites/${wrongAttempts}.png`; // ✅ Now updates correctly
+    if (wrongAttempts < maxAttempts - 1) { 
+        wrongAttempts++; 
+        hangmanImage.src = `sprites/${wrongAttempts}.png`;
+    } else {
+        wrongAttempts++;
+        hangmanImage.src = `sprites/${wrongAttempts}.png`;
+        gameMessage.innerHTML = `Game Over! The correct word was: <b>${selectedWord}</b>`;
+        gameResult.style.display = 'flex';
     }
     guessesText.textContent = `${wrongAttempts} / ${maxAttempts}`;
 }
