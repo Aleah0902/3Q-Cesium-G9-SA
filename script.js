@@ -56,13 +56,14 @@ function checkGameStatus() {
 function handleGuess(letter) {
     if (guessedLetters.includes(letter) || wrongAttempts >= maxAttempts) return;
 
-    if (selectedWord.includes(letter)) {
-        guessedLetters.push(letter);
-    } else {
-        wrongAttempts++;
-        hangmanImage.src = `sprites/${wrongAttempts}.png`;
-        guessesText.textContent = `${wrongAttempts} / ${maxAttempts}`;
-    }
+   if (selectedWord.includes(letter)) {
+    guessedLetters.push(letter);
+} else {
+    hangmanImage.src = `sprites/hangman-${wrongAttempts}.png`;
+    wrongAttempts++;
+    guessesText.textContent = `${wrongAttempts} / ${maxAttempts}`;
+}
+
 
     updateWordDisplay();
     checkGameStatus();
