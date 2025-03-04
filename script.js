@@ -19,7 +19,7 @@ function startGame() {
     wrongAttempts = 0;
     
     // Reset hangman image
-    hangmanImage.src = `sprites/hangman-0.svg`;
+    hangmanImage.src = `sprites/1.png`;
     
     // Reset word display
     wordDisplay.innerHTML = selectedWord.split('').map(() => '<span class="letter">_</span>').join('');
@@ -60,7 +60,7 @@ function handleGuess(letter) {
         guessedLetters.push(letter);
     } else {
         wrongAttempts++;
-        hangmanImage.src = `sprites/hangman-${wrongAttempts}.svg`;
+        hangmanImage.src = `sprites/hangman-${wrongAttempts}.png`;
         guessesText.textContent = `${wrongAttempts} / ${maxAttempts}`;
     }
 
