@@ -60,7 +60,7 @@ function handleGuess(letter) {
         guessedLetters.push(letter);
     } else {
         wrongAttempts++;
-        hangmanImage.src = `sprites/hangman-${wrongAttempts}.png`;
+        hangmanImage.src = `sprites/${wrongAttempts}.png`;
         guessesText.textContent = `${wrongAttempts} / ${maxAttempts}`;
     }
 
