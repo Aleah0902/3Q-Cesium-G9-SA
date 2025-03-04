@@ -12,13 +12,17 @@ body {
     background: #191970;
 }
 .container {
-    width: 850px;
-    background: #89CFF0;
-    display: flex;
-    gap: 70px;
-    align-items: flex-end;
-    padding: 60px 40px;
-    border-radius: 10px;
+    max-width: 90%;
+    width: 850px; 
+    margin: 0 auto; 
+}
+
+    }
+    .hangman-box img {
+        max-width: 200px;
+    }
+}
+
 }
 .hangman-box img {
     max-width: 270px;
@@ -44,9 +48,9 @@ body {
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 40px;
-    border-bottom: 3px solid #000;
+    
 }
-.word-display .letter.quessed {
+.word-display .letter.guessed {
     border-color: transparent;
     margin: -40px 0 35px;
 }
@@ -80,7 +84,7 @@ body {
     background: #31318a;
     border-radius: 4px;
     text-transform: uppercase;
-    width: calc(100% 9 - Spx);
+    width: calc(100% / 9 - Spx);
 }
 .keyboard button:hover{
     background: #4646a6;
