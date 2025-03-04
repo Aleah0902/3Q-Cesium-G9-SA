@@ -59,7 +59,7 @@ function handleGuess(letter) {
    if (selectedWord.includes(letter)) {
     guessedLetters.push(letter);
 } else {
-    hangmanImage.src = `sprites/hangman-${wrongAttempts}.png`;
+    hangmanImage.src = `sprites/${wrongAttempts}.png`;
     wrongAttempts++;
     guessesText.textContent = `${wrongAttempts} / ${maxAttempts}`;
 }
