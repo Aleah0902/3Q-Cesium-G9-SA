@@ -17,10 +17,6 @@ body {
     margin: 0 auto; 
 }
 
-   
-
-
-}
 .hangman-box img {
     max-width: 200px; 
     height: auto;
@@ -28,7 +24,6 @@ body {
     margin: 0 auto; 
 }
 
-}
 .hangman-box h1{
     font-size: 1.45rem;
     margin-top: 20px;
@@ -86,7 +81,7 @@ body {
     background: #31318a;
     border-radius: 4px;
     text-transform: uppercase;
-    width: calc(100% / 9 - Spx);
+    width: calc(100% / 9 - 5px);
 }
 .keyboard button:hover{
     background: #4646a6;
